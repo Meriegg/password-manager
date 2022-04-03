@@ -1,3 +1,5 @@
-export const isInProd: boolean = false;
+export const isInProd: boolean = true;
 
-export const apiUrl = isInProd ? "URL" : "http://localhost:3000";
+export const apiUrl = isInProd
+  ? "https://password-manager-psi.vercel.app"
+  : "http://localhost:3000";
