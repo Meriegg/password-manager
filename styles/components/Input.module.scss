@@ -1,0 +1,37 @@
+@import "../variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.input {
+  background: $contrast;
+  color: $text-primary;
+  border: none;
+  border-radius: 10px;
+  border: 2px solid lighten($contrast, 10%);
+  height: 60px;
+  font-size: 0.875rem;
+  padding-left: 25px;
+  font-weight: getFontweight(semibold);
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $text-secondary;
+  }
+
+  &_errorText {
+    font-size: 0.875rem;
+    margin-top: 4px;
+    font-weight: getFontweight(semibold);
+    color: red;
+  }
+}

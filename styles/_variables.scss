@@ -1,0 +1,69 @@
+$text-primary: #000;
+$text-secondary: #334155;
+$accent: #3b82f6;
+$contrast: rgba(0, 0, 0, 0.1);
+$red-error: #ef4444;
+
+// Breakpoint variables
+$breakpoints: (
+  "sm": 640px,
+  "md": 820px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "2xl": 1536px,
+);
+
+// font weights
+$fontWeights: (
+  "thin": 100,
+  "extralight": 200,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "extrabold": 800,
+  "black": 900,
+);
+
+// Functions
+@function getBp($breakpoint) {
+  @return map-get($breakpoints, $breakpoint);
+}
+
+@function getFontweight($weightName: semibold) {
+  @return map-get($fontWeights, $weightName);
+}
+
+// Mixins Breakpoints
+@mixin mq($breakpointWidth) {
+  @media screen and (max-width: $breakpointWidth) {
+    @content;
+  }
+}
+
+// Mixin utils
+@mixin paddingY($val: 0px) {
+  padding-top: $val;
+  padding-bottom: $val;
+}
+
+@mixin paddingX($val: 0px) {
+  padding-left: $val;
+  padding-right: $val;
+}
+
+@mixin marginX($val: 0px) {
+  margin-left: $val;
+  margin-right: $val;
+}
+
+@mixin marginY($val: 0px) {
+  margin-top: $val;
+  margin-bottom: $val;
+}
+
+@mixin transition($duration: 300ms, $delay: 0ms) {
+  transition: all $duration ease;
+  transition-delay: $delay;
+}
