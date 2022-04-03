@@ -57,6 +57,12 @@ const Password: React.FC<Props> = ({ password, resetState }) => {
     }, 2500);
   };
 
+  const handleDeleteConfirmation = (idx: number) => {
+    if (confirm("Are you sure you want to delete a password?")) {
+      deletePassword(idx);
+    }
+  };
+
   return (
     <div className={styles.password}>
       <div className={styles.password_content}>
@@ -81,7 +87,9 @@ const Password: React.FC<Props> = ({ password, resetState }) => {
             {isCopied ? "Copied!" : "Copy"}
           </Button>
         </CopyToClipboard>
-        <Button onClick={() => deletePassword(password.idx)}>Delete</Button>
+        <Button onClick={() => handleDeleteConfirmation(password.idx)}>
+          Delete
+        </Button>
       </div>
     </div>
   );
