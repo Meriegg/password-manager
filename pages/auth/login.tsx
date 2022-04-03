@@ -82,7 +82,7 @@ const Login: React.FC = () => {
 
       <Link href="/auth/register">
         <a className={styles.main_link}>
-          Don't have an account? Create one here!
+          Dont have an account? Create one here!
         </a>
       </Link>
     </div>
