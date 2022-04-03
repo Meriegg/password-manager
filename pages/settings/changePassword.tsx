@@ -45,10 +45,10 @@ const ChangePassword: NextPage = () => {
       <Link href={"/settings"}>
         <a className={styles.mainContainer_link}>
           <ChevronLeftIcon fill={"#000"} width={25} height={25} />
-          Inapoi la setari
+          Back to settings
         </a>
       </Link>
-      <h1>Schimba Parola!</h1>
+      <h1>Change Password!</h1>
       <form
         className={styles.mainContainer_form}
         onSubmit={handleSubmit((data) => {
@@ -79,11 +79,11 @@ const ChangePassword: NextPage = () => {
           </div>
         ) : null}
         {/* prettier-ignore */}
-        <Input type="password" placeholder="Parola Veche" errors={errors} register={register} name="oldPassword" />
+        <Input type="password" placeholder="Old password" errors={errors} register={register} name="oldPassword" />
         {/* prettier-ignore */}
-        <Input type="password" placeholder="Parola Noua" errors={errors} register={register} name="newPassword" />
+        <Input type="password" placeholder="New password" errors={errors} register={register} name="newPassword" />
 
-        <Button type="submit">Continua!</Button>
+        <Button type="submit">Continue!</Button>
       </form>
     </div>
   );

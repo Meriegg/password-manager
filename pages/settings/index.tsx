@@ -35,7 +35,7 @@ const Settings: React.FC = () => {
       <Link href={"/"}>
         <a className={styles.mainContainer_link}>
           <ChevronLeftIcon fill={"#000"} width={25} height={25} />
-          Inapoi Acasa
+          Back home
         </a>
       </Link>
 
