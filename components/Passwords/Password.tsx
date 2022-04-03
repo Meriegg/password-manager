@@ -77,7 +77,9 @@ const Password: React.FC<Props> = ({ password, resetState }) => {
           }
           onCopy={() => handleCopy()}
         >
-          <Button disabled={!revealedPassContent ? true : false}>Copy</Button>
+          <Button disabled={!revealedPassContent ? true : false}>
+            {isCopied ? "Copied!" : "Copy"}
+          </Button>
         </CopyToClipboard>
         <Button onClick={() => deletePassword(password.idx)}>Delete</Button>
       </div>

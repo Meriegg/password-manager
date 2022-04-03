@@ -56,3 +56,38 @@ export const isLoggedIn = async () => {
     }
   }
 };
+
+export const logout = async () => {
+  try {
+    const { data }: ts.BasicApiResponse = await instance.post(
+      "/api/auth/logout"
+    );
+
+    return data;
+  } catch (error) {
+    console.error(error);
+    if (axios.isAxiosError(error)) {
+      return error.response?.data;
+    } else {
+      return "We could not identify the cause of this error :(";
+    }
+  }
+};
+
+export const changePassword = async (formData: ts.ChangePasswordFormData) => {
+  try {
+    const { data }: ts.BasicApiResponse = await instance.post(
+      "/api/auth/changePassword",
+      formData
+    );
+
+    return data;
+  } catch (error) {
+    console.error(error);
+    if (axios.isAxiosError(error)) {
+      return error.response?.data;
+    } else {
+      return "We could not identify the cause of this error :(";
+    }
+  }
+};

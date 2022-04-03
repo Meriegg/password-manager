@@ -1,0 +1,47 @@
+@import "../variables";
+
+.mainContainer {
+  margin-top: 30px;
+  width: min(600px, 100%);
+  @include paddingX(30px);
+  @include mq(getBp(sm)) {
+    @include paddingX(15px);
+  }
+
+  &_item {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    border-radius: 10px;
+    @include paddingX(20px);
+    @include paddingY(10px);
+
+    p {
+      font-size: 1.125rem;
+      font-weight: getFontweight(semibold);
+    }
+
+    &:hover {
+      background: $contrast;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &_settings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &_link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: getFontweight(semibold);
+  }
+}

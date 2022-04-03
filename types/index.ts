@@ -29,3 +29,8 @@ export interface JwtToken {
   username: string;
   exp: Date;
 }
+
+export interface ChangePasswordFormData {
+  oldPassword: string;
+  newPassword: string;
+}
