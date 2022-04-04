@@ -34,7 +34,3 @@ export interface ChangePasswordFormData {
   oldPassword: string;
   newPassword: string;
 }
-
-export interface TestVimInterface {
-	purpose: string; // Purpose is for testing vim
-}
